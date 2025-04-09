@@ -1,0 +1,288 @@
+.barcode-scanner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.input-container {
+    width: 100%;
+    max-width: 640px;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.barcode-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.barcode-input:focus {
+    border-color: #0078d4;
+}
+
+.scan-button, .camera-switch-button {
+    padding: 8px 16px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.camera-switch-button {
+    background-color: #5c2d91;
+}
+
+.scan-button:hover {
+    background-color: #106ebe;
+}
+
+.camera-switch-button:hover {
+    background-color: #4a2276;
+}
+
+.viewport {
+    width: 100%;
+    max-width: 640px;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.viewport video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #106ebe;
+}
+
+.result {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 640px;
+}
+
+.barcode-scanner-error {
+    color: #d83b01;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 640px;
+}
+
+.error-message {
+    color: #d83b01;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #fed9cc;
+    border-radius: 4px;
+    border: 1px solid #d83b01;
+}
+
+/* Tarama alanı için görsel gösterge */
+.drawingBuffer {
+    display: none;
+    position: fixed;
+}
+
+#reader {
+    border: none !important;
+    background: #000 !important;
+}
+
+#reader > video {
+    border: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    background: #000 !important;
+}
+
+#reader__scan_region {
+    border: none !important;
+    background: none !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#reader__scan_region > img {
+    display: none !important;
+}
+
+#reader__dashboard {
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+#reader__dashboard_section {
+    display: none !important;
+}
+
+#reader__status_span {
+    display: none !important;
+}
+
+#reader__camera_selection {
+    display: none !important;
+}
+
+#reader__header_message {
+    display: none !important;
+}
+
+/* Dialog styles */
+.ms-Dialog-main {
+    max-width: 90vw !important;
+    width: 90vw !important;
+    height: 90vh !important;
+    background: #000 !important;
+}
+
+.ms-Dialog-content {
+    height: calc(90vh - 100px) !important;
+    background: #000 !important;
+}
+
+.ms-Dialog-inner {
+    background: #000 !important;
+}
+
+.ms-Dialog-header {
+    background: #000 !important;
+    color: white !important;
+}
+
+.ms-Dialog-button {
+    color: white !important;
+}
+
+.barcode-scanner {
+    margin: 0;
+    padding: 0;
+}
+
+.scan-button, .stop-button {
+    margin-top: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #0078d4;
+    color: white;
+    cursor: pointer;
+}
+
+.stop-button {
+    background-color: #d83b01;
+}
+
+.error-message {
+    color: #d83b01;
+    margin-top: 1rem;
+}
+
+.manual-input {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 2.5rem;
+}
+
+.manual-input input {
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 0.5rem 2.8rem 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.manual-input input:focus {
+    border-color: #0078d4;
+}
+
+.manual-input .scan-button {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.375rem;
+    height: calc(100% - 2px);
+    padding: 0.5rem;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.manual-input .scan-button:hover {
+    background-color: #106ebe;
+}
+
+.manual-input .scan-button .scan-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.dialog-footer {
+    margin-top: 1rem;
+    text-align: right;
+}
