@@ -30,10 +30,16 @@ The component supports the following barcode formats:
 
 ## Usage
 
+![sample (1)](https://github.com/user-attachments/assets/62578d88-e06f-4efd-85cb-cb44b40af2eb)
+
+
 1. Add the Barcode Scanner control to a text field in your entity form
 2. Configure the properties as needed
 3. Save and publish the form
 4. Users can now scan barcodes by clicking the scan button or manually enter values
+
+![SelectComponent](https://github.com/user-attachments/assets/45c8bed1-05e7-4040-af7e-5d6723487a13)
+
 
 ## Implementation Details
 
@@ -62,7 +68,7 @@ Special thanks to the following contributors who helped make this project possib
 - [Ömer Faruk DÖNMEZ](www.linkedin.com/in/ömer-faruk-dönmez-499622176)
 - [Veysel BAYSAL](https://www.linkedin.com/in/veysel-baysal-977b61127)
 - [Yasemin ALTUN](https://www.linkedin.com/in/yasemin-altun-608824226)
-- [Nursena Pelin İLTER](https://www.linkedin.com/in/nursena-pelin-ilter-a97893140)
+- [Nursena PELİN İLTER](https://www.linkedin.com/in/nursena-pelin-ilter-a97893140)
 
 ## License
 
