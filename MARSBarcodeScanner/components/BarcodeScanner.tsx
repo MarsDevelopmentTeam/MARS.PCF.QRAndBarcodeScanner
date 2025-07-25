@@ -19,7 +19,7 @@ export const BarcodeScanner: React.FC<IProps> = (props) => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        
+
         const script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js';
         script.async = true;
@@ -131,9 +131,9 @@ export const BarcodeScanner: React.FC<IProps> = (props) => {
                     </svg>
                 </button>
             </div>
-    
+
             {error && <div className="error-message">{error}</div>}
-    
+
             <Dialog
                 hidden={!isDialogOpen}
                 onDismiss={handleDialogDismiss}
@@ -148,6 +148,7 @@ export const BarcodeScanner: React.FC<IProps> = (props) => {
                 modalProps={{
                     isBlocking: true,
                     isDarkOverlay: true,
+                    className: 'barcode-scanner-dialog', // CSS sınıfı eklendi
                     styles: {
                         main: {
                             maxWidth: '90vw',
@@ -162,7 +163,7 @@ export const BarcodeScanner: React.FC<IProps> = (props) => {
                     }
                 }}
             >
-                <div id="reader" ref={containerRef} style={{ 
+                <div id="reader" ref={containerRef} style={{
                     width: '100%',
                     height: 'calc(90vh - 100px)',
                     border: 'none',
@@ -171,7 +172,7 @@ export const BarcodeScanner: React.FC<IProps> = (props) => {
                     alignItems: 'center',
                     justifyContent: 'center'
                 }}></div>
-                
+
                 <div className="dialog-footer" style={{ padding: '1rem' }}>
                     <button onClick={handleDialogDismiss} className="stop-button">
                         Taramayı Durdur

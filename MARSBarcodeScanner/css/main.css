@@ -7,20 +7,20 @@
     width: 100%;
 }
 
-.input-group {
+.barcode-scanner .input-group {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
     flex-wrap: wrap;
 }
 
-.input-container {
+.barcode-scanner .input-container {
     width: 100%;
     max-width: 640px;
     margin-bottom: 1rem;
 }
 
-.form-control {
+.barcode-scanner .form-control {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
@@ -29,7 +29,7 @@
     min-width: 200px;
 }
 
-.barcode-input {
+.barcode-scanner .barcode-input {
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
@@ -39,11 +39,12 @@
     transition: border-color 0.2s ease;
 }
 
-.barcode-input:focus {
+.barcode-scanner .barcode-input:focus {
     border-color: #0078d4;
 }
 
-.scan-button, .camera-switch-button {
+.barcode-scanner .scan-button,
+.barcode-scanner .camera-switch-button {
     padding: 8px 16px;
     background-color: #0078d4;
     color: white;
@@ -52,21 +53,37 @@
     cursor: pointer;
     font-size: 14px;
     white-space: nowrap;
+    transition: background-color 0.2s ease;
 }
 
-.camera-switch-button {
+.barcode-scanner .camera-switch-button {
     background-color: #5c2d91;
 }
 
-.scan-button:hover {
+.barcode-scanner .scan-button:hover {
     background-color: #106ebe;
 }
 
-.camera-switch-button:hover {
+.barcode-scanner .camera-switch-button:hover {
     background-color: #4a2276;
 }
 
-.viewport {
+.barcode-scanner .stop-button {
+    margin-top: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #d83b01;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.barcode-scanner .stop-button:hover {
+    background-color: #a73101;
+}
+
+.barcode-scanner .viewport {
     width: 100%;
     max-width: 640px;
     height: 480px;
@@ -76,29 +93,13 @@
     border-radius: 4px;
 }
 
-.viewport video {
+.barcode-scanner .viewport video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-button {
-    padding: 0.5rem 1rem;
-    background-color: #0078d4;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin: 0.5rem;
-    transition: background-color 0.2s ease;
-}
-
-button:hover {
-    background-color: #106ebe;
-}
-
-.result {
+.barcode-scanner .result {
     margin-top: 1rem;
     padding: 1rem;
     background-color: #f3f3f3;
@@ -107,7 +108,7 @@ button:hover {
     max-width: 640px;
 }
 
-.barcode-scanner-error {
+.barcode-scanner .barcode-scanner-error {
     color: #d83b01;
     padding: 1rem;
     text-align: center;
@@ -115,7 +116,7 @@ button:hover {
     max-width: 640px;
 }
 
-.error-message {
+.barcode-scanner .error-message {
     color: #d83b01;
     margin: 10px 0;
     padding: 8px;
@@ -124,109 +125,8 @@ button:hover {
     border: 1px solid #d83b01;
 }
 
-/* Tarama alanı için görsel gösterge */
-.drawingBuffer {
-    display: none;
-    position: fixed;
-}
-
-#reader {
-    border: none !important;
-    background: #000 !important;
-}
-
-#reader > video {
-    border: none !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    background: #000 !important;
-}
-
-#reader__scan_region {
-    border: none !important;
-    background: none !important;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-#reader__scan_region > img {
-    display: none !important;
-}
-
-#reader__dashboard {
-    border: none !important;
-    background: none !important;
-    padding: 0 !important;
-}
-
-#reader__dashboard_section {
-    display: none !important;
-}
-
-#reader__status_span {
-    display: none !important;
-}
-
-#reader__camera_selection {
-    display: none !important;
-}
-
-#reader__header_message {
-    display: none !important;
-}
-
-/* Dialog styles */
-.ms-Dialog-main {
-    max-width: 90vw !important;
-    width: 90vw !important;
-    height: 90vh !important;
-    background: #000 !important;
-}
-
-.ms-Dialog-content {
-    height: calc(90vh - 100px) !important;
-    background: #000 !important;
-}
-
-.ms-Dialog-inner {
-    background: #000 !important;
-}
-
-.ms-Dialog-header {
-    background: #000 !important;
-    color: white !important;
-}
-
-.ms-Dialog-button {
-    color: white !important;
-}
-
-.barcode-scanner {
-    margin: 0;
-    padding: 0;
-}
-
-.scan-button, .stop-button {
-    margin-top: 1rem;
-    padding: 8px 16px;
-    border-radius: 4px;
-    border: none;
-    background-color: #0078d4;
-    color: white;
-    cursor: pointer;
-}
-
-.stop-button {
-    background-color: #d83b01;
-}
-
-.error-message {
-    color: #d83b01;
-    margin-top: 1rem;
-}
-
-.manual-input {
+/* Manual input styling - scoped */
+.barcode-scanner .manual-input {
     display: flex;
     align-items: stretch;
     width: 100%;
@@ -235,7 +135,7 @@ button:hover {
     min-height: 2.5rem;
 }
 
-.manual-input input {
+.barcode-scanner .manual-input input {
     width: 100%;
     min-height: 2.5rem;
     padding: 0.5rem 2.8rem 0.5rem 0.75rem;
@@ -247,11 +147,11 @@ button:hover {
     box-sizing: border-box;
 }
 
-.manual-input input:focus {
+.barcode-scanner .manual-input input:focus {
     border-color: #0078d4;
 }
 
-.manual-input .scan-button {
+.barcode-scanner .manual-input .scan-button {
     position: absolute;
     right: 1px;
     top: 1px;
@@ -272,17 +172,95 @@ button:hover {
     margin: 0;
 }
 
-.manual-input .scan-button:hover {
+.barcode-scanner .manual-input .scan-button:hover {
     background-color: #106ebe;
 }
 
-.manual-input .scan-button .scan-icon {
+.barcode-scanner .manual-input .scan-button .scan-icon {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.dialog-footer {
+/* QR Code Reader styles - more specific selectors */
+.barcode-scanner .drawingBuffer {
+    display: none;
+    position: fixed;
+}
+
+.barcode-scanner #reader {
+    border: none !important;
+    background: #000 !important;
+}
+
+.barcode-scanner #reader > video {
+    border: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    background: #000 !important;
+}
+
+.barcode-scanner #reader__scan_region {
+    border: none !important;
+    background: none !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.barcode-scanner #reader__scan_region > img {
+    display: none !important;
+}
+
+.barcode-scanner #reader__dashboard {
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+.barcode-scanner #reader__dashboard_section {
+    display: none !important;
+}
+
+.barcode-scanner #reader__status_span {
+    display: none !important;
+}
+
+.barcode-scanner #reader__camera_selection {
+    display: none !important;
+}
+
+.barcode-scanner #reader__header_message {
+    display: none !important;
+}
+
+/* Dialog specific styles - more targeted */
+.barcode-scanner-dialog .ms-Dialog-main {
+    max-width: 90vw !important;
+    width: 90vw !important;
+    height: 90vh !important;
+    background: #000 !important;
+}
+
+.barcode-scanner-dialog .ms-Dialog-content {
+    height: calc(90vh - 100px) !important;
+    background: #000 !important;
+}
+
+.barcode-scanner-dialog .ms-Dialog-inner {
+    background: #000 !important;
+}
+
+.barcode-scanner-dialog .ms-Dialog-header {
+    background: #000 !important;
+    color: white !important;
+}
+
+.barcode-scanner-dialog .ms-Dialog-button {
+    color: white !important;
+}
+
+.barcode-scanner .dialog-footer {
     margin-top: 1rem;
     text-align: right;
 }
