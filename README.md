@@ -30,6 +30,9 @@ The component supports the following barcode formats:
 
 ## Usage
 
+You can import the pre-built PCF package directly from:
+Solutions/bin/Release/MARS.QRAndBarcodeScanner.Pcf.zip (unmanaged)
+
 ![sample (1)](https://github.com/user-attachments/assets/62578d88-e06f-4efd-85cb-cb44b40af2eb)
 
 
